@@ -22,24 +22,11 @@ When creating your public repository from a fork of someone's project, make sure
 
 For more information on open source, specifically how to create and grow an open source project, we've created [Open Source Guides](https://opensource.guide/) that will help you foster a healthy open source community by recommending best practices for creating and maintaining repositories for your open source project. You can also take a free [GitHub Learning Lab](https://lab.github.com/) course on maintaining open source communities.
 
-### Fork an example repository
-
-Forking a repository is a simple two-step process. We've created a repository for you to practice with!
-
-1. On GitHub, navigate to the [octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife) repository.
-2. ![Fork button](https://help.github.com/assets/images/help/repository/fork_button.jpgthe top-right corner of the page, click **Fork**.
-
-That's it! Now, you have a *fork* of the original octocat/Spoon-Knife repository.
-
-### Keep your fork synced
-
-You might fork a project in order to propose changes to the *upstream*, or original, repository. In this case, it's good practice to regularly sync your fork with the upstream repository. To do this, you'll need to use Git on the command line. You can practice setting the upstream repository using the same [octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife) repository you just forked!
-
 #### Step 1: Fork the repo
 
 Forking a repository is a simple two-step process. We've created a repository for you to practice with!
 
-1. On GitHub, navigate to the https://github.com/webbshasta/pfb2018_FinalProjectrepository.
+1. On GitHub, navigate to the https://github.com/webbshasta/pfb2018_FinalProject trepository.
 2. In the top-right corner of the page, click the button **Fork**.
 
 #### Step 2: Create a local clone of your fork
