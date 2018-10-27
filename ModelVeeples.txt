@@ -2,11 +2,25 @@
 
 # Eve
 
-Veeple1 = {‘ID’:1,’Sex’:’X’,’Genome’:[‘A1’,’B1’],’Base Fitness’:10,’Fitness’:10}
+Veeple1 = {
+          ‘ID’:1,
+          'Sex’:’X’,
+          ’mGenome’:[‘A1’,’B1’],
+          'pGenome':[‘A1’,’B1’],
+          ’Base Fitness’:10,
+          ’Fitness’:10
+          }
 
 # Adam
 
-Veeple2 = {‘ID’:2,’Sex’:’Y’,’Genome’:[‘A2’,’B2’],’Base Fitness’:10,’Fitness’:10}
+Veeple2 = {
+          ‘ID’:2,
+          'Sex’:’Y’,
+          ’mGenome’:[‘A2’,’B2’],
+          'pGenome':[‘A2’,’B2’],
+          ’Base Fitness’:10,
+          ’Fitness’:10
+          }
 
 # ID = <int>
 # Sex = <str>
