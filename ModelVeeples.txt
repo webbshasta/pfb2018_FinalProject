@@ -19,7 +19,7 @@ Veeple2 = {
           'mGenome' : ['A2','B2'],
           'pGenome' : ['A2','B2'],
           'Base Fitness': 10,
-          'Fitness : 10
+          'Fitness' : 10
           }
 
 # ID = <int>
