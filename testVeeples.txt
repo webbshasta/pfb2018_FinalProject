@@ -1,0 +1,18 @@
+Veeple1 = {
+          'ID' : 1,
+          'Sex' : 'X',
+          'mGenome' : ['A1','B1'],
+          'pGenome' : ['A1','B1'],
+          'Base Fitness' : 10,
+          'Fitness' : 10
+          },
+Veeple2 = {
+          'ID' : 2,
+          'Sex' : 'Y',
+          'mGenome' : ['A2','B2'],
+          'pGenome' : ['A2','B2'],
+          'Base Fitness': 10,
+          'Fitness' : 10
+          }
+
+testVeeplelist = [Veeple1, Veeple2]

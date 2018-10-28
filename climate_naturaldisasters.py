@@ -9,7 +9,7 @@ import random
 climate = random.randint(1,10) #picks a random number to choose climate
 natural_disaster = random.randint(1,10)# picks a random number to check if a natural disaster occurs
 
-population_amount = 50 #test case. Remove when in final form.
+population_amount = 10 #test case. Remove when in final form.
 
 
 def get_climate(climate):
@@ -76,8 +76,12 @@ def get_naturaldisasters(natural_disaster,climate):
     return(natural_disaster_score) #this value corresponds to the penalty value, or 0
 
 def get_populationhealth(climate, population_amount):
-    diseasedict = {'measles': 3, 'typhoid': 2, 'diptheria':3, 'cholera':1, 'chicken pox': 0}
-    disease_list = list(diseasedict)
+    
+    diseasedict = {'measles': 3, 'typhoid': 2, 'diptheria':3, 'cholera':1, 'chicken pox': 0, 'influenza': 2, 'smallpox': 5}
+    disease_list = list(diseasedict)#because just grabbing the keys with d.keys() wont work
+    
+    #initializing the disease score, in the case there are no diseases
+    disease_score = 0
 
     disease = random.randint(1,10) #sets the counter for if a disease happens
 
@@ -87,11 +91,23 @@ def get_populationhealth(climate, population_amount):
             disease_type = disease_list[list_index]
             disease_score = diseasedict[disease_type]
             print("Disease:", disease_type)
-    elif disease >8: #20% chance of disease due to climate
-            list_index = random.randint(0,len(disease_list)-1) #index to randomly choose the disease
-            disease_type = disease_list[list_index]
-            disease_score = diseasedict[disease_type]
-            print("Disease:", disease_type)
+        else:#What happens if you have a larger population, but the disease counter doesn't give you a disease
+            disease_type = 'None'
+            print("Congratulations! Even though you have a lot of Veeples, the polution hasn't affected your health too much.")
+
+    elif disease >8: #20% chance of disease due to climate and no population effects
+        list_index = random.randint(0,len(disease_list)-1) #index to randomly choose the disease
+        disease_type = disease_list[list_index]
+        disease_score = diseasedict[disease_type]
+        print("Disease:", disease_type)
+
+    else: #otherwise no diseases affect the population
+        disease_type= 'None'
+        print("congratulations, your population is relatively disease free! Good work on vaccinations.")
+
+    print("Disease score:", disease_score)
+    return(disease_score)
 
 get_climate(climate)
-get_naturaldisasters(natural_disaster)
+get_naturaldisasters(natural_disaster, climate)
+get_populationhealth(climate, population_amount)
