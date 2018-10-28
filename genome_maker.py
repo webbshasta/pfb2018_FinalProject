@@ -4,8 +4,7 @@
 # Defining function for starter genome
 #==============
 
-# This function requires the Veeple1 and Veeple2 dictionaries. These 
-dictionaries will have all keys filled
+# This function requires the Veeple1 and Veeple2 dictionaries. These dictionaries will have all keys filled
 # except for the 'mGenome' and the 'pGenome'.
 
 import random
@@ -76,8 +75,7 @@ def base_fitness(Veeple):
 BF = base_fitness(Veeple1)
 print(BF)
 
-def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5, 
-Veeple):
+def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5,Veeple):
     randomIndex1 = random.randint(0, len(alleles1) -1)
     randomIndex2 = random.randint(0, len(alleles2) - 1)
     randomIndex3 = random.randint(0, len(alleles1) -1)
@@ -106,6 +104,5 @@ Veeple):
 
     return(Veeple)
 
-print(starterGenome(allelesGeneA, allelesGeneB, allelesGeneC, 
-allelesGeneD, allelesGeneE, Veeple1))
+#print(starterGenome(allelesGeneA, allelesGeneB, allelesGeneC, allelesGeneD, allelesGeneE, Veeple1))
 
