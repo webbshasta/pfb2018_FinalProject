@@ -73,7 +73,7 @@ def base_fitness(Veeple):
 
     return base_fitness
 BF = base_fitness(Veeple1)
-print(BF)
+#print(BF)
 
 def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5,Veeple):
     randomIndex1 = random.randint(0, len(alleles1) -1)
