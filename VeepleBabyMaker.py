@@ -13,6 +13,7 @@ Veeple1 = {
           'pGenome' : ['A1','B1'],
           'Base Fitness' : 10,
           'Fitness' : 10
+          
           }
 
 # Adam
@@ -34,7 +35,13 @@ Veeple2 = {
 print("The sexes are:",Veeple1['Sex'], Veeple2['Sex'])
 
 #def VeepleBabyMaker():
-if Veeple1['Sex'] == Veeple2['Sex']: #need one of each--no VeepleBaby
+if Veeple1['Fitness'] < 3: #some number to be determined later
+    print('Maybe eugenics is not such a bad thing--James Watson')
+    
+elif Veeple2['Fitness'] < 3:
+    print('Maybe eugenics is not such a bad thing--James Watson')
+
+elif Veeple1['Sex'] == Veeple2['Sex']: #need one of each--no VeepleBaby
     print("nice...recreation but no procreation, if we don't get along...consequences")
 
 elif random.randint(1,2) == 1:  #assign sex of Veeplebaby
