@@ -1,11 +1,11 @@
-#!"""/usr/bin/env python3
+#!/usr/bin/env python3
 # Starting to make the better game of life
 import random
-from genome_maker import starterGenome
-from genome_maker import base_fitness
-from behavior_initializer import behavior_initializer
+import genome_maker
+#from behavior_initializer import behavior_initializer
 import sys
 from VeepleChooser import VeepleChooser
+from behavior_initializer import behavior_initializer
 from behavior_analyzer import behavior_analyzer
 
 #Make some starter veeples
@@ -44,13 +44,14 @@ VeepleBaby = {
           }
 
 # Give Eve a starter genome, fitnesses, and behavior
-Veeple1 = starterGenome(Veeple1)
-Veeple1 = base_fitness(Veeple1)
+Veeple1 = genome_maker.starterGenome(genome_maker.allelesGeneA, genome_maker.allelesGeneB, genome_maker.allelesGeneC, genome_maker.allelesGeneD, genome_maker.allelesGeneE, Veeple1)
+Veeple1 = genome_maker.base_fitness(Veeple1)
 Veeple1 = behavior_initializer(Veeple1)
 
 # Give Adam a starter genome, fitnesses, and behavior
-Veeple2 = starterGenome(Veeple2)
-Veeple2 = base_fitness(Veeple2)
+
+Veeple2 = genome_maker.starterGenome(genome_maker.allelesGeneA, genome_maker.allelesGeneB, genome_maker.allelesGeneC, genome_maker.allelesGeneD, genome_maker.allelesGeneE, Veeple2)
+Veeple2 = genome_maker.base_fitness(Veeple2)
 Veeple2 = behavior_initializer(Veeple2)
 
 # Initialize a veeple census
@@ -66,11 +67,11 @@ TotalGenerations = 3
 while generation < TotalGenerations:
     VeepleTab = copy.VeepleCensus()
     for veeple in VeepleTab:
-        randomVeepInd = VeepleChooser(VeepleTab)
+        randomVeepInd = VeepleChooser.VeepleChooser(VeepleTab)
         print(randomVeepInd)
-        veepForBehAna1 = randomVeepInd[0]
-        veepForBehAna2 = randomVeepInd[1]
-        newVeeps = behavior_analyzer(veepForBehAna1, veepForBehAna2)
+       # veepForBehAna1 = randomVeepInd[0]
+       # veepForBehAna2 = randomVeepInd[1]
+       # newVeeps = behavior_analyzer(veepForBehAna1, veepForBehAna2)
 
 """    
   
