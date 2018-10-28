@@ -17,13 +17,11 @@
 #          }
 #veeplecensus = [Veeple1, Veeple2]
 
-#method which takes the veeple census, and one by one, assigns a behavior to each veeple.
-def behavior_initializer(veeplecensus):
+#method which takes a single veeple and assigns a dictionary randomly. current default fuck.
+def behavior_initializer(veeple):
     behavior_options = ['fight','fuck','family']
     option_index = randint(0,len(behavior_options)-1)
-
-    for individual in veeplecensus:#for each veeple, assign a behavior
-        individual['Behavior'] = behavior_options[1]#change 1 to option_index once we want more options
-    return(veeplecensus)
+    veeple['Behavior'] = behavior_options[1]#change 1 to option_index once we want more options
+    return(veeple)
 
 #behavior_initializer(veeplecensus)
