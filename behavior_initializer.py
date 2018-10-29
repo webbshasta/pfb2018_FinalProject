@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import random
 #Veeple1 = {
 #          'ID' : 1,
 #          'Sex' : 'X',
@@ -19,9 +20,9 @@
 
 #method which takes a single veeple and assigns a dictionary randomly. current default fuck.
 def behavior_initializer(veeple):
-    behavior_options = ['fight','fuck','family']
-    option_index = randint(0,len(behavior_options)-1)
-    veeple['Behavior'] = behavior_options[1]#change 1 to option_index once we want more options
+    behavior_options = ['fight','fuck','forage']
+    option_index = random.randint(0,len(behavior_options)-1)
+    veeple['Behavior'] = behavior_options[option_index]
     return(veeple)
 
 #behavior_initializer(veeplecensus)
