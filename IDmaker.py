@@ -5,6 +5,6 @@ id_list = []
 def VeepleID(veepleCensus, Veeple):
     for veep in veepleCensus:
         id_list.append(veep['ID'])
-    newID = (max(id_list)+1)
+    newID = (len(id_list)+1)
     Veeple['ID'] = newID
     return Veeple
