@@ -40,4 +40,4 @@ def fight_club(veeple1, veeple2):
         veeple1['Fitness'] -= 2
         veeple2['Fitness'] -= 2
     
-    return veeple1, veeple2
+    return (veeple1, veeple2)

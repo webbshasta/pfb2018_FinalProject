@@ -53,11 +53,12 @@ import random
 #    return sendTo
 
 def VeepleSex(VeepDict1, VeepDict2):
+    sendTo2 = ''
     Fitness1 = int(VeepDict1['Fitness'])
     Fitness2 = int(VeepDict2['Fitness'])
     if (VeepDict1['Sex'] != VeepDict2['Sex'] and Fitness1 > 3 and Fitness2 > 3):
-        sendTo = 'Fit to mate'
-    return sendTo
+        sendTo2 = 'Fit to mate'
+    return sendTo2
 
 def VeepleSexAssign(VeepDict1, VeepDict2, VeepDictBaby):
     if random.randint(1,2) == 1:  #assign sex of Veeplebaby
