@@ -7,16 +7,16 @@
 #          'pGenome' : ['A1','B1'],
 #          'Base Fitness' : 10,
 #          'Fitness' : 10,
-#          'Behavior' : 'family'
+#          'Behavior' : 'forage'
 #          }
 #Veeple2 = {
 #          'ID' : 2,
-#          'Sex' : 'Y',
+#         'Sex' : 'Y',
 #          'mGenome' : ['A2','B2'],
 #          'pGenome' : ['A2','B2'],
 #          'Base Fitness': 10,
 #          'Fitness' : 10,
-#          'Behavior': 'family'
+#          'Behavior': 'fight'
 #          }
 
 #method which takes two veeples from VeepleBooper and analyzes which behavior to send them to
@@ -28,20 +28,37 @@ def behavior_analyzer(veeple1, veeple2):
     #if the behaviors are mating and consensual
     if behav1 == behav2 and behav1 == 'fuck':
         sendTo = 'fuck'
-    #if the behaviors are fighting and mutual
-    elif behav1 == behav2 and behav1 == 'fight':
-        sendTo = 'fight'
-    #if everyone wants to farm and leave the others alone
-    elif behav1 == behav2 and behav1 == 'family':
-        sendTo = 'family'
-    #the two behaviors are not the same, fight > fuck > family
     else:
-        if behav1 == 'fight' or behav2 == 'fight':
-            sendTo = 'fight'
-        elif behav1 == 'fuck' or behav2 == 'fuck':
-            sendTo = 'fuck'
+        sendTo = 'fightclub'
+    return(sendTo)
+
+#skeleton sends veeples to the appropriate output --essentially if not going to mating module
+#input two veeple dictionaries, output updated dictionaries
+def fight_club(veeple1, veeple2):
+    behav1 = veeple1['Behavior']
+    behav2 = veeple2['Behavior']
+    fit1 = veeple1['Fitness']
+    fit2 = veeple2['Fitness']
+
+    #when fighting, see who has the better fitness and determine winners.
+    if behav1 == behav2 and behav1 == 'fight':
+        if fit1 > fit2:
+            veeple1['Fitness'] += 8
+            veeple2['Fitness'] -= 2
+        elif fit1 < fit2:
+            veeple1['Fitness'] -= 2
+            veeple2['Fitness'] += 8
         else:
-            sendTo = 'family' #this option may not be relevant in these circumstances.
-    return(veeple1,veeple2,sendTo)
+            veeple1['Fitness'] -= 4
+            veeple2['Fitness'] -= 4
+    #when foraging, both veeples gain the same advantage
+    elif behav1 == behav2 and behav1 == 'forage':
+        veeple1['Fitness'] += 7
+        veeple2['Fitness'] += 7
+    #if no one agrees, that means they waste time running away and suffer
+    else:
+        veeple1['Fitness'] -= 2
+        veeple2['Fitness'] -= 2
 
 #behavior_analyzer(Veeple1, Veeple2)
+#fight_club(Veeple1, Veeple2)
