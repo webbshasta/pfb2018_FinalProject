@@ -1,23 +1,3 @@
-#!/usr/bin/env python3
-
-#Veeple1 = {
-#          'ID' : 1,
-#          'Sex' : 'X',
-#          'mGenome' : ['A1','B1'],
-#          'pGenome' : ['A1','B1'],
-#          'Base Fitness' : 10,
-#          'Fitness' : 10,
-#          'Behavior' : 'forage'
-#          }
-#Veeple2 = {
-#          'ID' : 2,
-#         'Sex' : 'Y',
-#          'mGenome' : ['A2','B2'],
-#          'pGenome' : ['A2','B2'],
-#          'Base Fitness': 10,
-#          'Fitness' : 10,
-#          'Behavior': 'fight'
-#          }
 
 #method which takes two veeples from VeepleBooper and analyzes which behavior to send them to
 def behavior_analyzer(veeple1, veeple2):
@@ -60,8 +40,4 @@ def fight_club(veeple1, veeple2):
         veeple1['Fitness'] -= 2
         veeple2['Fitness'] -= 2
     
-   # veeple1['Used'] = 'yes'
-   # veeple2['Used'] = 'yes'
     return veeple1, veeple2
-#behavior_analyzer(Veeple1, Veeple2)
-#fight_club(Veeple1, Veeple2)

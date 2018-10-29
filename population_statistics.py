@@ -1,32 +1,11 @@
-#!/usr/bin/env python3
 
 import genome_maker
 
-#Veeple1 = {
-#          'ID' : 1,
-#          'Sex' : 'X',
-#          'mGenome' : ['A1','B1'],
-#          'pGenome' : ['A1','B1'],
-#          'Base Fitness' : 10,
-#          'Fitness' : 10
-#          }
-
-#Veeple2 = {
-#          'ID' : 2,
-#          'Sex' : 'Y',
-#          'mGenome' : ['A2','B2'],
-#          'pGenome' : ['A2','B2'],
-#          'Base Fitness': 10,
-#          'Fitness' : 10
-#          }
-
-#testVeeplelist = [Veeple1, Veeple2]
 
 #method which counts the total veeple population from input: census list
 #the length of elements in the list is the number of people added to the census
 def veeple_population_count(veeplecensus):
     total_pop = len(veeplecensus)
-#    print('Total veeple population:',total_pop)
     return (total_pop)
 
 #method which counts % of male and female veeples from the total census list
@@ -71,6 +50,3 @@ def veeple_allelic_frequencies(veeplecensus):
     return(allelic_frequencies_dict)
 
 
-#veeple_population_count(testVeeplelist)
-#veeple_percent_genders(testVeeplelist)
-#veeple_allelic_frequencies(testVeeplelist)
