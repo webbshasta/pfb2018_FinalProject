@@ -6,34 +6,34 @@ import random
 
 # Eve
 
-Veeple1 = {
-          'ID' : 1,
-          'Sex' : 'X',
-          'mGenome' : ['A1','B1'],
-          'pGenome' : ['A1','B1'],
-          'Base Fitness' : 10,
-          'Fitness' : 10
-          }
+##Veeple1 = {
+#          'ID' : 1,
+#          'Sex' : 'X',
+#          'mGenome' : ['A1','B1'],
+#          'pGenome' : ['A1','B1'],
+#          'Base Fitness' : 10,
+#          'Fitness' : 10
+#          }
 
 # Adam
 
-Veeple2 = {
-          'ID' : 2,
-          'Sex' : 'Y',
-          'mGenome' : ['A2','B2'],
-          'pGenome' : ['A2','B2'],
-          'Base Fitness': 10,
-          'Fitness' : 10
-          }
+#Veeple2 = {
+#          'ID' : 2,
+#          'Sex' : 'Y',
+#          'mGenome' : ['A2','B2'],
+#          'pGenome' : ['A2','B2'],
+#          'Base Fitness': 10,
+#          'Fitness' : 10
+#          }
 
-VeepleBaby = {
-          'ID' : 0,
-          'Sex' : '',
-          'mGenome' : [],
-          'pGenome' : [],
-          'Base Fitness': 0,
-          'Fitness' : 0
-          }
+#VeepleBaby = {
+#          'ID' : 0,
+#          'Sex' : '',
+#          'mGenome' : [],
+#          'pGenome' : [],
+#          'Base Fitness': 0,
+#          'Fitness' : 0
+#          }
 
 # ID = <int>
 # Sex = <str>
