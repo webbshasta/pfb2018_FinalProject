@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 #=============
 # Defining function for starter genome
 #==============
@@ -9,25 +8,6 @@
 
 import random
 
-# Eve
-#Veeple1 = {
-#          'ID':1,
-#          'Sex':'X',
-#          'mGenome':[],
-#          'pGenome':[],
-#          'Base Fitness':10,
-#          'Fitness':10
-#          }
-
-# Adam
-#Veeple2 = {
-#          'ID':2,
-#          'Sex':'Y',
-#          'mGenome':[],
-#          'pGenome':[],
-#          'Base Fitness':10,
-#          'Fitness':10
-#          }
 
 # Alleles list
 allelesGeneA = ['A1', 'A2', 'A3', 'A4']
@@ -72,9 +52,12 @@ def base_fitness(Veeple):
             base_fitness += Allele_fit_dict[allele]
     return base_fitness
 
-#print(BF)
+
+
 mGenome = []
 pGenome = []
+
+
 def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5,Veeple):
     randomIndex1 = random.randint(0, len(alleles1) -1)
     randomIndex2 = random.randint(0, len(alleles2) - 1)
@@ -96,5 +79,4 @@ def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5,Veeple):
 
     return(Veeple)
 
-#print(starterGenome(allelesGeneA, allelesGeneB, allelesGeneC, allelesGeneD, allelesGeneE, Veeple1))
 
