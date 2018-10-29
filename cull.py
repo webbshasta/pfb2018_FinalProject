@@ -47,7 +47,7 @@
 def veeplecull(VeepleCensus):
     for Veeple in VeepleCensus:
         if Veeple['Fitness'] < 2:
-            print(Veeple['ID'],"to be culled")
+           # print(Veeple['ID'],"to be culled")
     
             VeepleCensus.remove(Veeple)
 
