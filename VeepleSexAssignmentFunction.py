@@ -44,8 +44,9 @@ import random
 
 #def VeepleBabyMaker():
 def VeepleMatingTest(VeepDict1, VeepDict2, VeepDictBaby):
-
-    if (VeepDict1['Fitness'] > 3 and VeepDict2['Fitness'] > 3):
+    Fitness1 = int(VeepDict1['Fitness'])
+    Fitness2 = int(VeepDict2['Fitness'])
+    if (Fitness1 > 3 and Fitness2 > 3):
         if VeepDict1['Sex'] == VeepDict2['Sex']:
             print('Cannot mate.')
         elif random.randint(1,2) == 1:  #assign sex of Veeplebaby

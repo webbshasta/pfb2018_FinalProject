@@ -10,24 +10,24 @@
 import random
 
 # Eve
-Veeple1 = {
-          'ID':1,
-          'Sex':'X',
-          'mGenome':[],
-          'pGenome':[],
-          'Base Fitness':10,
-          'Fitness':10
-          }
+#Veeple1 = {
+#          'ID':1,
+#          'Sex':'X',
+#          'mGenome':[],
+#          'pGenome':[],
+#          'Base Fitness':10,
+#          'Fitness':10
+#          }
 
 # Adam
-Veeple2 = {
-          'ID':2,
-          'Sex':'Y',
-          'mGenome':[],
-          'pGenome':[],
-          'Base Fitness':10,
-          'Fitness':10
-          }
+#Veeple2 = {
+#          'ID':2,
+#          'Sex':'Y',
+#          'mGenome':[],
+#          'pGenome':[],
+#          'Base Fitness':10,
+#          'Fitness':10
+#          }
 
 # Alleles list
 allelesGeneA = ['A1', 'A2', 'A3', 'A4']
@@ -70,9 +70,8 @@ def base_fitness(Veeple):
     for allele in pGenome:
         if allele in Allele_fit_dict:
             base_fitness += Allele_fit_dict[allele]
-
     return base_fitness
-BF = base_fitness(Veeple1)
+
 #print(BF)
 
 def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5,Veeple):
@@ -96,11 +95,9 @@ def starterGenome(alleles1, alleles2, alleles3, alleles4, alleles5,Veeple):
     Veeple['pGenome'].append(alleles4[randomIndex8])
     Veeple['mGenome'].append(alleles5[randomIndex9])
     Veeple['pGenome'].append(alleles5[randomIndex10])
-    Base_Fitness = 0
     Base_Fitness = base_fitness(Veeple)
     Veeple['Base Fitness'] = Base_Fitness
-    Fitness = 0
-    Veeple['Fitness'] = Fitness
+    Veeple['Fitness'] = Base_Fitness
 
     return(Veeple)
 
