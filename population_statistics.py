@@ -10,7 +10,7 @@ def veeple_population_count(veeplecensus):
 
 #method which counts % of male and female veeples from the total census list
 #input: census list
-def veeple_percent_genders(veeplecensus):
+def veeple_percent_sex(veeplecensus):
     total_female = 0
     total_male = 0
     total_pop = len(veeplecensus)
