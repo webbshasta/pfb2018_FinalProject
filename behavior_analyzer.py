@@ -60,8 +60,8 @@ def fight_club(veeple1, veeple2):
         veeple1['Fitness'] -= 2
         veeple2['Fitness'] -= 2
     
-    veeple1['Used'] = 'yes'
-    veeple2['Used'] = 'yes'
-    return(veeple1, veeple2)
+   # veeple1['Used'] = 'yes'
+   # veeple2['Used'] = 'yes'
+    return veeple1, veeple2
 #behavior_analyzer(Veeple1, Veeple2)
 #fight_club(Veeple1, Veeple2)
