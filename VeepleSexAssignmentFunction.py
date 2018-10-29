@@ -43,23 +43,30 @@ import random
 #print("The sexes are:",Veeple1['Sex'], Veeple2['Sex'])
 
 #def VeepleBabyMaker():
-def VeepleMatingTest(VeepDict1, VeepDict2, VeepDictBaby):
+#def VeepleFitnessTest(VeepDict1, VeepDict2):
+#    Fitness1 = int(VeepDict1['Fitness'])
+#    Fitness2 = int(VeepDict2['Fitness'])
+#    if (Fitness1 > 3 and Fitness2 > 3):
+#        sendTo = 'Fit'
+#    else:
+#        sendTo = 'Not fit'
+#    return sendTo
+
+def VeepleSex(VeepDict1, VeepDict2):
     Fitness1 = int(VeepDict1['Fitness'])
     Fitness2 = int(VeepDict2['Fitness'])
-    if (Fitness1 > 3 and Fitness2 > 3):
-        if VeepDict1['Sex'] == VeepDict2['Sex']:
-            print('Cannot mate.')
-        elif random.randint(1,2) == 1:  #assign sex of Veeplebaby
-            VeepleSex = 'Y'
-            VeepDictBaby['Sex'] = VeepleSex
-        else:  #making Veeplebaby
-            VeepleSex = 'X'
-            VeepDictBaby['Sex'] = VeepleSex
-    else:
-        print('Fitness is too low to mate.')
-    return VeepDictBaby
+    if (VeepDict1['Sex'] != VeepDict2['Sex'] and Fitness1 > 3 and Fitness2 > 3):
+        sendTo = 'Fit to mate'
+    return sendTo
 
-    #return(VeepDict1, VeepDict2)
+def VeepleSexAssign(VeepDict1, VeepDict2, VeepDictBaby):
+    if random.randint(1,2) == 1:  #assign sex of Veeplebaby
+        VeepleSex = 'Y'
+        VeepDictBaby['Sex'] = VeepleSex
+    else:  #making Veeplebaby
+        VeepleSex = 'X'
+        VeepDictBaby['Sex'] = VeepleSex
+    return VeepDictBaby   #return(VeepDict1, VeepDict2)
 
 #def VeepleSexAssign(VeepDict1, VeepDict2, VeepDictBaby):
 
