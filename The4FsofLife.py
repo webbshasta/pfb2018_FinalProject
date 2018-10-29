@@ -84,18 +84,20 @@ init_allelic_freq = vaf(VeepleCensus)
 sex_percents = vps(VeepleCensus)
 per_X = sex_percents[0]*100
 per_Y = sex_percents[1]*100
-#print('Initial population is {} large \nIt has {}%X and {}%Y \nThe allelic frequencies are {}'.format(init_tot_pop, per_X, per_Y, init_allelic_freq))
+print('Initial population is {} large \nIt has {}%X and {}%Y'.format(init_tot_pop, per_X, per_Y))
+for key, value in init_allelic_freq.items():
+    print('Allele:',key,'frequency',value)
 
 # Generation Counter
 generation = 0
-TotalGenerations = 10
-
+TotalGenerations = 25
+print('\n Starting simulation\n')
 # Life happens here up to set number of generations
 while generation < TotalGenerations:
 
     #Death clause
     if len(VeepleCensus) < 2:
-        print('The population has crashed -- Ask not for whom the bell tolls')
+        print('The population has crashed -- Ask not for whom the bell tolls\n')
         break
     else: # Looping over the population
         loserID = -1 
@@ -121,7 +123,6 @@ while generation < TotalGenerations:
                         babyVeeple = VeepleID(VeepleArchive, babyVeeple)
                         babyVeeple = veeple_meiosis(vfa1, vfa2, babyVeeple)
                         babyVeeple['Used'] = 'yes'  # Our initiated vBaby
-                        #print('babyVeeple\n',babyVeeple)
                         vfa1['Used'] = 'yes'
                         vfa2['Used'] = 'yes'
                         VeepleCensus.append(babyVeeple)  # Add vBaby to the census
@@ -132,11 +133,8 @@ while generation < TotalGenerations:
                     VeepleCensus.remove(vfa1)  # Take out our actors from census
                     VeepleCensus.remove(vfa2)   
                     changedVeeples = fight_club(vfa1, vfa2) # Get them back with new fit
-                    #print('Changed veeps\n', type(changedVeeples))
                     altVeeple1 = changedVeeples[0]
-                    #print('Alt1\n',type(altVeeple1))
                     altVeeple2 = changedVeeples[1]
-                    #print('Alt2\n',type(altVeeple2))
                     altVeeple1['Used'] = 'yes'
                     altVeeple2['Used'] = 'yes'
                     VeepleCensus.append(altVeeple1)
@@ -149,7 +147,6 @@ while generation < TotalGenerations:
     diseaseScore = clim.get_populationhealth(clim.climate, len(VeepleCensus))
     for veeple in VeepleCensus:
         updatedVeep = Veepfit(veeple, climateScore, diseaseScore, disasterScore)
-       # print(updatedVeep)
     for veeple in VeepleCensus:
         veeple = behavior_initializer(veeple)
     VeepleCensus = veeplecull(VeepleCensus)
@@ -157,9 +154,7 @@ while generation < TotalGenerations:
         veeple['Used'] = 'no'
     for veeple in VeepleCensus:
         print('id', veeple['ID'], '\t','sex', veeple['Sex'], '\tbehav', veeple['Behavior'], '\tfit',veeple['Fitness'] )
-    print('gen',generation)
-    print(len(VeepleCensus), 'VC')
-    print(len(VeepleArchive),'VA')
+    print('^Generation Completed^ #'+str(generation)+'\n')
     generation += 1
 
 #Get final population statistics
@@ -168,6 +163,8 @@ fin_allelic_freq = vaf(VeepleCensus)
 fin_sex_percents = vps(VeepleCensus)
 fin_per_X = sex_percents[0]*100
 fin_per_Y = sex_percents[1]*100
-#print('Final population is {} large \nIt has {}%X and {}%Y \nThe allelic frequencies are {}'.format(fin_tot_pop, fin_per_X, fin_per_Y, fin_allelic_freq))
+print('Final population is {} large \nIt has {}%X and {}%Y'.format(fin_tot_pop, fin_per_X, fin_per_Y))
+for key,value in fin_allelic_freq.items():
+    print('Allele:',key,'frequency:',value)
 
 
