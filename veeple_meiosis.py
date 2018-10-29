@@ -30,5 +30,6 @@ def veeple_meiosis(veeple1,veeple2,veeplebaby):
     #calling up Genome_Maker base fitness
     Allele_fit_dict = gm.Allele_fit_dict
     veeplebaby['Base Fitness'] = gm.base_fitness(veeplebaby)
+    veeplebaby['Fitness'] = gm.base_fitness(veeplebaby)
     return(veeplebaby)
 
