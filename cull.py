@@ -44,14 +44,14 @@
 
 #VeepleCensus = [Veeple1, Veeple2, Veeple3, Veeple4]
 
-def veeplecull(VeepleCensus):
-    for Veeple in VeepleCensus:
+def veeplecull(census):
+    for Veeple in census:
         if Veeple['Fitness'] < 2:
            # print(Veeple['ID'],"to be culled")
-    
-            VeepleCensus.remove(Veeple)
 
-    return VeepleCensus
+            census.remove(Veeple)
+
+    return census
 #print(len(VeepleCensus))
-veeplecull(VeepleCensus)
+#veeplecull(VeepleCensus)
 #print(len(VeepleCensus))
