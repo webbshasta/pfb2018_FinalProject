@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # identify and remove Veeples with fitness too low to continue.
 def veeplecull(census):
     for Veeple in census:

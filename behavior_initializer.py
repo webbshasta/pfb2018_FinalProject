@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random
 Veeple2 = {
           'ID' : 2,

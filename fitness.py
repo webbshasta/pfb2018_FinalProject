@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 
 def Veepfit(Veeple1, envScore, natDisScore, diseaseScore): #set up function
 

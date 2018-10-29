@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 #method which takes two veeples from VeepleBooper and analyzes which behavior to send them to
 def behavior_analyzer(veeple1, veeple2):
     #reads in behaviors and assigns them for easier coding
